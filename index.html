@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add new user profile</title>
+  <link href="styles.css" rel="stylesheet"></link>
+</head>
+  <body>
+    <div id="wrapper">
+
+     <header>
+      <img id="header-icon" src="./assets/icon.png" alt="Icon image of a drawing compass"/>
+      <h2>Add new User Profile</h2>
+    </header>
+    
+    <div id='interior-wrapper'>
+
+    <section id="side-bar">
+      <ul id="side-list">
+        <li id="login-bullet">Add login details</li>
+        <li id="group-bullet">Select the user group</li>
+        <li id="avatar-bullet">Add an avatar</li>
+        <li id="submit-bullet">Submit the form</li>
+      </ul>
+        <img class="side-bar-icon" src="./assets/app-icon.png" alt="Icon image of a drawing compass" />
+    </section>
+
+    <main>
+      <form>
+        <div id="login-form">
+          <h6 for="input-email">EMAIL</h6>
+          <input id="input-email"></input>
+          <h6 for="input-password">PASSWORD</h6>
+          <input id="input-password"></input>
+          <h6 for="input-verify-password">VERIFY PASSWORD</h6>
+          <input id="input-verify-password"></input>
+          <div class="btn-div">
+            <button class="btn btn-cancel">Cancel</button>
+            <button id="btn-login-next" class="btn btn-next">Next</button>
+          </div>
+        </div>
+        
+        <div id="group-form">
+          <h2>Choose the User Group</h2>
+          <label for="group-select">USER GROUP<span id="group-label-span"> User Group to add the users to</span></label>
+          </br>
+          <select name="group-select" id="group-select">
+            <option value="None">None</option>
+          </select>
+          <div class="btn-div">
+            <button class="btn btn-cancel">Cancel</button>
+            <button id="btn-group-next" class="btn btn-next">Next</button>
+          </div>
+        </div>
+
+        <div id="avatar-form">
+          <h6>AVATAR<span id="group-label-span"> User Avatar. It is recommended that you use a file with the GIF or PNG format. The recommended size is 512x512 pixels.</span></h6>
+          <p><img src="assets/app-icon.png" alt="avatar icon" width="50" height="50"/></p>
+          <button id="btn-avatar-upload" class="btn show-modal">Upload Avatar</button>
+          <div class="btn-div">
+            <button class="btn btn-cancel">Cancel</button>
+            <button id="btn-avatar-next" class="btn btn-next">Next</button>
+          </div>
+        </div>
+
+        <div id="submit-form">
+          <h6>AVATAR</h6>
+          <p><img src="assets/app-icon.png" alt="avatar icon" width="50" height="50"/></p>
+          <div class="btn-div">
+          <button class="btn btn-cancel">Cancel</button>
+          <button id="btn-submit-next" class="btn btn-next">Next</button>
+        </div>
+        </div>
+        
+      </form>
+    </main>
+
+    </div>
+
+    <div class="modal">
+      <header>
+      <h1>Avatar</h1>
+      </header>
+      <p>
+        User Avatar. It is recommended that you use a file with the GIF or PNG format. The recommended size is 512x512 pixels.
+      </p>
+      <button class="btn upload-file">Choose File</button>
+      <div id="modal-btn-div">
+          <button id="modal-btn-cancel" class="btn btn-cancel close-modal">Cancel</button>
+          <button id="modal-btn-upload" class="btn btn-next">Upload</button>
+      </div>
+    </div>
+    <div class="overlay"></div>
+
+    </div>
+    <script type="text/javascript" src="scripts/index.js"></script>
+  </body>
+</html>

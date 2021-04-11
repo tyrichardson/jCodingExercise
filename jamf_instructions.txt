@@ -1,0 +1,32 @@
+# Instructions
+* Use the provided mockups to recreate a wizard.
+* To solve the task use your choice of the technologies that you think best fit the task and would be used in this role, based on the position description: https://recruit.hirebridge.com/v3/application/applink.aspx?cid=7883&jid=543702
+* All mockups and assets can be found here:
+https://www.dropbox.com/sh/36hwzr44x4lths9/AACDZ-H-JFXopzRDIIZ0s0n_a?dl=0
+
+# Font
+* ProximaNova
+
+# Task Comments
+* The user is not able to proceed to the next step without filling all required info.
+* You can use either straight CSS or a pre-compiler if you prefer.  No preference.
+* Get as far as you can.  If you do not have enough time, we can take a look at what you have accomplished.
+* Use 'mock.json' data to fill the select options.
+* Clicking 'Upload Avatar' will open a modal and create an overlay layer.
+* The user should be able to verify all the info in the last step, before submitting it.
+* There is no need for any submit action.
+* An avatar preview WILL be treated as a bonus task.
+* Drag and drop functionality is NOT required and will NOT be treated as a bonus task.
+
+# Bonus points
+* Re-usability
+* Unit and integration tests coverage
+* Attention to detail
+* Consistency of coding patterns
+* Error handling
+
+# Commentary
+Please let us know if you liked the task or what we can improve in the COMMENTS.md file
+
+sidebar-background: 
+https://uc8192a36e05f74cdcc6da9d52fc.previews.dropboxusercontent.com/p/thumb/ABJ1wK2ZvxzaeOJl7KGO3bNjBd_xwBcpSMa1SFbgbvgSSe51z8qmAXkbGrueBINSK48MBF97PlVh-FjtHzKJqTdj-gYOZgzToE5tPBAPWm4_pXCv7u-GV3JTtgSiDDibMYF2tYaowRHKs4BOUVxWX9WphzB5jDgBQzSm2EkD4n9ALDBhSjNnFcQ7YkHJ-TJM4RXUM_RGP27ZAa9ClBzMepyHDJi6_E2AZUBuWLjRBCgrLNABQEa9WLYqPYtN2qlVPvMp2_btvOTVyb_5u4spgpAhqbxb-MeWWlrZ87Yqjp6_Bcbg38kTw84VFVo_iUWo01YtDAvh1fFbqVguCeq8kxbkN7uKT8juqgcbc2epuKj_3w/p.png?fv_content=true&size_mode=5

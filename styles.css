@@ -1,0 +1,194 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100%;
+  color: #5f5f5f;
+  background-color: gray;
+}
+#wrapper {
+  width: 80%;
+  margin: 10% auto;
+  background-color: white;
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
+  align-items: center;
+  border-bottom: solid 0.25rem #f2f2f2;
+  padding-bottom: 0.25%;
+  color: #66738b;
+  font-size: 70%;
+}
+header h2 {
+  font-weight: lighter;
+}
+#header-icon {
+  width: 1.5rem;
+  margin-right: 0.5rem;
+  margin-left: 1%;
+}
+#interior-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+section {
+  flex: 0 0 20%;
+  background-image: url("assets/side-background.png");
+  border-right: solid 0.1rem #f2f2f2;
+  overflow: hidden;
+}
+ul {
+  padding: 0.5rem 1rem;
+  list-style-type: none;
+  font-size: 80%;
+  color: #5f5f5f;
+}
+ul li::before {
+  content: "\2022";
+  font-size: 250%;
+  display: inline-block;
+  width: 1.5rem;
+  margin-left: -0.25rem;
+  vertical-align: middle;
+}
+.bullet::before {
+  color: lightgreen;
+}
+.side-bar-icon {
+  width: 10rem;
+  margin-left: 15%;
+}
+
+main {
+  flex: 0 0 80%;
+  padding: 1rem;
+  position: relative;
+}
+main h6 {
+  font-weight: 600;
+  font-size: 60%;
+  letter-spacing: 1px;
+}
+.hidden {
+  display: none;
+}
+input {
+  width: 100%;
+  margin-top: 0;
+}
+#login-form h6 {
+  margin-bottom: 0.2rem;
+  color: #5f5f5f;
+}
+select {
+  width: 100%;
+  margin: 0.25rem 0 0.5rem 0;
+}
+label {
+  font-variant-caps: small-caps;
+}
+#avatar-form h6 {
+  color: darkslategray;
+}
+#avatar-form p {
+  margin-left: 1rem;
+}
+#group-label-span {
+  font-variant-caps: normal;
+  color: #66738b;
+  margin-left: 0.5rem;
+}
+select {
+  padding: 0.25rem 0;
+  font-size: 0.75rem;
+}
+button:focus {
+  outline: none;
+}
+.btn-div {
+  position: absolute;
+  top: 90%;
+  right: 2.5%;
+}
+.btn {
+  font-size: 60%;
+  font-weight: 200%;
+  border-radius: 5rem;
+  padding: 0.35rem 0.75rem;
+  margin: 0 0.2rem;
+  color: darkgray;
+  border: solid 0.05rem lightgray;
+}
+.btn-next {
+  color: aliceblue;
+  background-color: #30a6f6;
+}
+#btn-avatar-upload {
+  background-image: url("assets/side-background.png");
+  padding: 0.5rem 0.5rem;
+}
+main h2 {
+  font-weight: lighter;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.modal {
+  font-weight: 100;
+  font-size: 1rem;
+}
+.modal header {
+  position: relative;
+  font-weight: 100;
+  font-size: 1rem;
+}
+.modal header h1 {
+}
+#modal-btn-cancel {
+  position: absolute;
+  top: 80%;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.95rem;
+}
+#modal-btn-upload {
+  position: absolute;
+  top: 80%;
+  right: 5%;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.95rem;
+}

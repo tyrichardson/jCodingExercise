@@ -91,7 +91,8 @@ input {
   width: 100%;
   margin-top: 0;
 }
-#login-form h6 {
+#login-form h6,
+#submit-form h6 {
   margin-bottom: 0.2rem;
   color: #5f5f5f;
 }
@@ -102,20 +103,39 @@ select {
 label {
   font-variant-caps: small-caps;
 }
-#avatar-form h6 {
-  color: darkslategray;
+#group-form {
+  font-size: 70%;
 }
-#avatar-form p {
-  margin-left: 1rem;
+#group-form-label {
+  letter-spacing: 1px;
 }
 #group-label-span {
   font-variant-caps: normal;
+  letter-spacing: normal;
   color: #66738b;
   margin-left: 0.5rem;
 }
 select {
   padding: 0.25rem 0;
   font-size: 0.75rem;
+}
+#avatar-label {
+  color: darkslategray;
+  font-size: 60%;
+}
+#avatar-label-span {
+  font-variant-caps: normal;
+  letter-spacing: normal;
+  color: lightgray;
+  margin-left: 0.5rem;
+}
+#avatar-form img {
+  margin: 0.05rem 1rem;
+}
+#submit-form h6,
+#email-display,
+#group-display {
+  color: lightgray;
 }
 button:focus {
   outline: none;
@@ -148,11 +168,12 @@ main h2 {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
-  background-color: white;
+  width: 60%;
+  height: 50%;
+  background-color: aliceblue;
   padding: 6rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
@@ -161,11 +182,11 @@ main h2 {
 .overlay {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 5%;
+  width: 90%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(1px);
   z-index: 5;
 }
 .modal {
@@ -174,21 +195,24 @@ main h2 {
 }
 .modal header {
   position: relative;
-  font-weight: 100;
   font-size: 1rem;
 }
 .modal header h1 {
+  font-weight: lighter;
+}
+#modal-btn-choose-file {
+  font-size: 0.85rem;
 }
 #modal-btn-cancel {
   position: absolute;
   top: 80%;
   font-size: 0.95rem;
-  padding: 0.5rem 0.95rem;
+  padding: 0.75rem 1rem;
 }
 #modal-btn-upload {
   position: absolute;
   top: 80%;
   right: 5%;
   font-size: 0.95rem;
-  padding: 0.5rem 0.95rem;
+  padding: 0.75rem 1rem;
 }

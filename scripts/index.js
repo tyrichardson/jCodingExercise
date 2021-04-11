@@ -23,13 +23,29 @@ const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 const btnShowModal = document.querySelector(".show-modal");
 
+const btnsCancel = document.querySelectorAll(".btn-cancel");
+
+let userEmail;
+let pw;
+let pwVerify;
+
+let userGroup = document.getElementById("group-select").value;
+
 // initialize state
-loginBullet.classList.add("bullet");
-groupDiv.classList.add("hidden");
-avatarDiv.classList.add("hidden");
-submitDiv.classList.add("hidden");
-modal.classList.add("hidden");
-overlay.classList.add("hidden");
+function init() {
+  loginDiv.classList.remove("hidden");
+  loginBullet.classList.add("bullet");
+  groupDiv.classList.add("hidden");
+  groupBullet.classList.remove("bullet");
+  avatarDiv.classList.add("hidden");
+  avatarBullet.classList.remove("bullet");
+  submitDiv.classList.add("hidden");
+  submitBullet.classList.remove("bullet");
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+}
+
+init();
 
 getSelectObject();
 
@@ -48,30 +64,55 @@ async function getSelectObject(event) {
   }
 }
 
+// handler
+
 // event listeners on next buttons
 loginNext.addEventListener("click", function (e) {
   e.preventDefault();
-  groupDiv.classList.remove("hidden");
-  loginDiv.classList.add("hidden");
-  groupBullet.classList.add("bullet");
-  loginBullet.classList.remove("bullet");
+  userEmail = document.getElementById("input-email").value;
+  pw = document.getElementById("input-password").value;
+  pwVerify = document.getElementById("input-verify-password").value;
+  if (!userEmail || !pw || !pwVerify) {
+    alert("Entries are required in all three fields.");
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail)) {
+    alert("Your email entry seems to be improperly formatted.");
+  } else if (pw !== pwVerify) {
+    alert('Entries in "PASSWORD" and "VERIFY PASSORD" must match.');
+  } else {
+    groupDiv.classList.remove("hidden");
+    loginDiv.classList.add("hidden");
+    groupBullet.classList.add("bullet");
+    loginBullet.classList.remove("bullet");
+  }
 });
 
 groupNext.addEventListener("click", function (e) {
   e.preventDefault();
-  avatarDiv.classList.remove("hidden");
-  groupDiv.classList.add("hidden");
-  avatarBullet.classList.add("bullet");
-  groupBullet.classList.remove("bullet");
+  userGroup = document.getElementById("group-select").value;
+  if (userGroup == "None") {
+    alert("A User Group must be selected.");
+  } else {
+    avatarDiv.classList.remove("hidden");
+    groupDiv.classList.add("hidden");
+    avatarBullet.classList.add("bullet");
+    groupBullet.classList.remove("bullet");
+  }
 });
 
 avatarNext.addEventListener("click", function (e) {
   e.preventDefault();
+  document.getElementById("email-display").value = userEmail;
+  document.getElementById("group-display").value = userGroup;
   submitDiv.classList.remove("hidden");
   avatarDiv.classList.add("hidden");
   submitBullet.classList.add("bullet");
   avatarBullet.classList.remove("bullet");
 });
+
+// event lister to handle cancel
+for (let i = 0; i < btnsCancel.length; i++) {
+  btnsCancel[i].addEventListener("click", init);
+}
 
 // event listener/handlers for modal
 const openModal = function (e) {

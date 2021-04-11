@@ -28,49 +28,53 @@
     </section>
 
     <main>
-      <form>
+      <form id="new-user-profile-form" action="">
         <div id="login-form">
           <h6 for="input-email">EMAIL</h6>
-          <input id="input-email"></input>
+          <input id="input-email" type="email" placeholder="(Required)" required></input>
           <h6 for="input-password">PASSWORD</h6>
-          <input id="input-password"></input>
+          <input id="input-password" type="password" placeholder="(Required)" required></input>
           <h6 for="input-verify-password">VERIFY PASSWORD</h6>
-          <input id="input-verify-password"></input>
+          <input id="input-verify-password" placeholder="(Required)"  type="password" required></input>
           <div class="btn-div">
-            <button class="btn btn-cancel">Cancel</button>
+            <button class="btn btn-cancel" type="reset">Cancel</button>
             <button id="btn-login-next" class="btn btn-next">Next</button>
           </div>
         </div>
         
         <div id="group-form">
           <h2>Choose the User Group</h2>
-          <label for="group-select">USER GROUP<span id="group-label-span"> User Group to add the users to</span></label>
+          <label id="group-form-label" for="group-select">USER GROUP<span id="group-label-span"> User Group to add the users to</span></label>
           </br>
           <select name="group-select" id="group-select">
             <option value="None">None</option>
           </select>
           <div class="btn-div">
-            <button class="btn btn-cancel">Cancel</button>
+            <button onClick="history.go(0);" class="btn btn-cancel" type="reset">Cancel</button>
             <button id="btn-group-next" class="btn btn-next">Next</button>
           </div>
         </div>
 
         <div id="avatar-form">
-          <h6>AVATAR<span id="group-label-span"> User Avatar. It is recommended that you use a file with the GIF or PNG format. The recommended size is 512x512 pixels.</span></h6>
+          <label id="avatar-label">AVATAR<span id="avatar-label-span"> User Avatar. It is recommended that you use a file with the GIF or PNG format. The recommended size is 512x512 pixels.</span></label>
           <p><img src="assets/app-icon.png" alt="avatar icon" width="50" height="50"/></p>
           <button id="btn-avatar-upload" class="btn show-modal">Upload Avatar</button>
           <div class="btn-div">
-            <button class="btn btn-cancel">Cancel</button>
+            <button class="btn btn-cancel" type="reset">Cancel</button>
             <button id="btn-avatar-next" class="btn btn-next">Next</button>
           </div>
         </div>
 
         <div id="submit-form">
+          <h6 for="email-display">EMAIL</h6>
+          <input id="email-display" type="email" disabled></input>
+          <h6 for="group-display">USER GROUP</h6>
+          <input id="group-display" type="text" disabled></input>
           <h6>AVATAR</h6>
-          <p><img src="assets/app-icon.png" alt="avatar icon" width="50" height="50"/></p>
+          <img src="assets/app-icon.png" alt="avatar icon" width="50" height="50"/>
           <div class="btn-div">
-          <button class="btn btn-cancel">Cancel</button>
-          <button id="btn-submit-next" class="btn btn-next">Next</button>
+          <button class="btn btn-cancel" type="reset">Cancel</button>
+          <submit id="btn-submit-next" class="btn btn-next" type="submit" name="submit-btn">Submit</>
         </div>
         </div>
         
@@ -86,9 +90,9 @@
       <p>
         User Avatar. It is recommended that you use a file with the GIF or PNG format. The recommended size is 512x512 pixels.
       </p>
-      <button class="btn upload-file">Choose File</button>
+      <button id="modal-btn-choose-file" class="btn">Choose File</button>
       <div id="modal-btn-div">
-          <button id="modal-btn-cancel" class="btn btn-cancel close-modal">Cancel</button>
+          <button id="modal-btn-cancel" class="btn close-modal">Cancel</button>
           <button id="modal-btn-upload" class="btn btn-next">Upload</button>
       </div>
     </div>

@@ -1,6 +1,8 @@
 "use strict";
 console.log("index.js is connected");
 
+// variables
+
 const selectOptions = document.getElementById("group-select");
 
 const loginBullet = document.getElementById("login-bullet");
@@ -64,9 +66,7 @@ async function getSelectObject(event) {
   }
 }
 
-// handler
-
-// event listeners on next buttons
+// event listeners/handlers on next buttons
 loginNext.addEventListener("click", function (e) {
   e.preventDefault();
   userEmail = document.getElementById("input-email").value;
@@ -109,7 +109,7 @@ avatarNext.addEventListener("click", function (e) {
   avatarBullet.classList.remove("bullet");
 });
 
-// event lister to handle cancel
+// event listener/handler for cancel buttons
 for (let i = 0; i < btnsCancel.length; i++) {
   btnsCancel[i].addEventListener("click", init);
 }

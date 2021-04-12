@@ -17,6 +17,9 @@ body {
   color: #5f5f5f;
   background-color: gray;
 }
+.hidden {
+  display: none;
+}
 #wrapper {
   width: 80%;
   margin: 10% auto;
@@ -41,6 +44,7 @@ header h2 {
   margin-right: 0.5rem;
   margin-left: 1%;
 }
+
 #interior-wrapper {
   display: flex;
   flex-flow: row nowrap;
@@ -84,8 +88,8 @@ main h6 {
   font-size: 60%;
   letter-spacing: 1px;
 }
-.hidden {
-  display: none;
+main h2 {
+  font-weight: lighter;
 }
 input {
   width: 100%;
@@ -137,6 +141,7 @@ select {
 #group-display {
   color: lightgray;
 }
+
 button:focus {
   outline: none;
 }
@@ -162,9 +167,6 @@ button:focus {
   background-image: url("assets/side-background.png");
   padding: 0.5rem 0.5rem;
 }
-main h2 {
-  font-weight: lighter;
-}
 
 .modal {
   position: absolute;
@@ -172,7 +174,7 @@ main h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
-  height: 50%;
+  height: 70%;
   background-color: aliceblue;
   padding: 6rem;
   border-radius: 5px;
@@ -193,7 +195,12 @@ main h2 {
   font-weight: 100;
   font-size: 1rem;
 }
-.modal header {
+#modal-header {
+  width: 100%;
+  border-bottom: solid 0.25rem #f2f2f2;
+  padding-bottom: 0.25%;
+  color: #66738b;
+  font-size: 70%;
   position: relative;
   font-size: 1rem;
 }

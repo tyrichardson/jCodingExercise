@@ -33,6 +33,8 @@ let pwVerify;
 
 let userGroup = document.getElementById("group-select").value;
 
+const previewImg = document.getElementById("avatar_preview_img");
+
 // initialize state
 function init() {
   loginDiv.classList.remove("hidden");
@@ -45,6 +47,7 @@ function init() {
   submitBullet.classList.remove("bullet");
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
+  previewImg.classList.add("hidden");
 }
 
 init();
@@ -142,5 +145,38 @@ overlay.addEventListener("click", overlayCloseModal);
 document.addEventListener("keydown", function (e) {
   if (e.key == "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
+  }
+});
+
+// event listener/handlers for avatar file input
+// defaultFile
+const avatarInput = document.getElementById("avatar-input");
+// customBtn
+const btnChooseFile = document.getElementById("modal-btn-choose-file");
+// customSpace
+const avatarInputMsg = document.getElementById("avatar-input-msg");
+
+btnChooseFile.addEventListener("click", function () {
+  avatarInput.click();
+});
+
+avatarInput.addEventListener("change", function () {
+  if (avatarInput.value) {
+    avatarInputMsg.innerHTML =
+      avatarInput.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1] + "?";
+  } else {
+    avatarInputMsg.innerHTML = "No File Chosen";
+  }
+
+  const files = avatarInput.files[0];
+  console.log(files);
+
+  if (files) {
+    previewImg.classList.remove("hidden");
+    const fileReader = new FileReader();
+    fileReader.addEventListener("load", function () {
+      avatar_preview_img.setAttribute("src", this.result);
+    });
+    fileReader.readAsDataURL(files);
   }
 });

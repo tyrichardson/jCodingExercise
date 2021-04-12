@@ -90,7 +90,16 @@
       <p>
         User Avatar. It is recommended that you use a file with the GIF or PNG format. The recommended size is 512x512 pixels.
       </p>
-      <button id="modal-btn-choose-file" class="btn">Choose File</button>
+      <div id="choose-file-div">
+        <input type="file" id="avatar-input" hidden="hidden" />
+        <button id="modal-btn-choose-file" class="btn">Choose File</button>
+        <span id="avatar-input-msg"> No File Chosen</span>
+      </div>
+      <div id="avatar-preview-holder">
+        <div id="avatar-preview">
+          <img src="" id="avatar_preview_img" class="preview-img" alt="A preview of the selected avatar image." width="150" height="150"/>
+        </div>
+      </div>
       <div id="modal-btn-div">
           <button id="modal-btn-cancel" class="btn close-modal">Cancel</button>
           <button id="modal-btn-upload" class="btn btn-next">Upload</button>

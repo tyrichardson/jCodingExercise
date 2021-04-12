@@ -141,15 +141,6 @@ select {
 #group-display {
   color: lightgray;
 }
-
-button:focus {
-  outline: none;
-}
-.btn-div {
-  position: absolute;
-  top: 90%;
-  right: 2.5%;
-}
 .btn {
   font-size: 60%;
   font-weight: 200%;
@@ -158,6 +149,21 @@ button:focus {
   margin: 0 0.2rem;
   color: darkgray;
   border: solid 0.05rem lightgray;
+}
+.btn:hover {
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+.btn:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.btn-div {
+  position: absolute;
+  top: 90%;
+  right: 2.5%;
 }
 .btn-next {
   color: aliceblue;
@@ -222,4 +228,24 @@ button:focus {
   right: 5%;
   font-size: 0.95rem;
   padding: 0.75rem 1rem;
+}
+
+#avatar-preview-holder {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 150px;
+  max-height: 150px;
+}
+#avatar-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 50px;
+  max-height: 50px;
+}
+.avatar_preview_img {
+  max-width: 150px;
+  max-height: 150px;
 }

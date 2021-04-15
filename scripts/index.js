@@ -80,7 +80,7 @@ loginNext.addEventListener("click", function (e) {
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userEmail)) {
     alert("Your email entry seems to be improperly formatted.");
   } else if (pw !== pwVerify) {
-    alert('Entries in "PASSWORD" and "VERIFY PASSORD" must match.');
+    alert('Entries in "PASSWORD" and "VERIFY PASSWORD" must match.');
   } else {
     groupDiv.classList.remove("hidden");
     loginDiv.classList.add("hidden");
